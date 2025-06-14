@@ -22,11 +22,30 @@ import {
     };
   
     const handleSubmit = async () => {
-      await axios.post('/api/students', form);
-      onAdded();
-      onClose();
-      setForm({ name: '', email: '', phone: '', codeforcesHandle: '' });
+      if (!form.codeforcesHandle) return;
+    
+      try {
+        const res = await axios.get(`https://codeforces.com/api/user.info?handles=${form.codeforcesHandle}`);
+        const cfUser = res.data.result[0];
+    
+        const newStudent = {
+          name: cfUser.firstName + ' ' + cfUser.lastName || cfUser.handle,
+          email: form.email || '',
+          phone: form.phone || '',
+          codeforcesHandle: cfUser.handle,
+          currentRating: cfUser.rating || 0,
+          maxRating: cfUser.maxRating || 0,
+        };
+    
+        await axios.post('/api/students', newStudent);
+        onAdded();
+        onClose();
+      } catch (err) {
+        alert("Invalid Codeforces Handle");
+        console.error(err);
+      }
     };
+    
   
     return (
       <Dialog open={open} onClose={onClose}>

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { createContext, useContext, useMemo, useState } from 'react';
@@ -25,6 +26,30 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         palette: {
           mode,
         },
+        typography: {
+          fontFamily:
+            'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+        },
+        shape: {
+          borderRadius: 12, 
+        },
+        components: {
+          MuiPaper: {
+            styleOverrides: {
+              root: {
+                borderRadius: 16,
+              },
+            },
+          },
+          MuiButton: {
+            styleOverrides: {
+              root: {
+                textTransform: 'none', 
+                borderRadius: 12,
+              },
+            },
+          },
+        },
       }),
     [mode]
   );
@@ -38,3 +63,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     </ThemeContext.Provider>
   );
 }
+
+
+

@@ -16,8 +16,14 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
   return NextResponse.json(updated);
 }
 
-export async function DELETE(req: Request, { params }: { params: { id: string } }) {
+// export async function DELETE(req: Request, { params }: { params: { id: string } }) {
+//   await connectDB();
+//   await Student.findByIdAndDelete(params.id);
+//   return NextResponse.json({ success: true });
+// }
+export async function DELETE(req: Request, context: { params: { id: string } }) {
+  const { id } = context.params;
   await connectDB();
-  await Student.findByIdAndDelete(params.id);
+  await Student.findByIdAndDelete(id);
   return NextResponse.json({ success: true });
 }
