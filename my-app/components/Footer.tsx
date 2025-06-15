@@ -1,4 +1,3 @@
-// app/components/Footer.tsx
 'use client';
 
 import { Box, Container, Typography, Link, useTheme } from '@mui/material';

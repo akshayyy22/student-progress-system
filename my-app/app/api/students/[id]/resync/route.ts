@@ -1,4 +1,3 @@
-// app/api/students/[id]/resync/route.ts
 import { connectDB } from '@/lib/db';
 import Student from '@/models/Student';
 import axios from 'axios';

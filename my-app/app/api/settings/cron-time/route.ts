@@ -14,7 +14,6 @@ export async function POST(req: Request) {
   await CronSettings.deleteMany({}); // clear old
   await CronSettings.create({ cronTime: time });
 
-  // Write to cron-config.json as well
   const configPath = path.join(process.cwd(), 'cron-config.json');
   await fs.writeFile(configPath, JSON.stringify({ time }, null, 2), 'utf-8');
 

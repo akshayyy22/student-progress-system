@@ -1,4 +1,3 @@
-// models/CronSettings.ts
 import mongoose from 'mongoose';
 
 const CronSettingsSchema = new mongoose.Schema({

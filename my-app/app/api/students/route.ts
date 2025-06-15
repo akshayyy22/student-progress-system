@@ -1,4 +1,3 @@
-// app/api/students/route.ts
 import { connectDB } from '@/lib/db';
 import Student from '@/models/Student';
 import { NextResponse } from 'next/server';

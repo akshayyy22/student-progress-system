@@ -1,4 +1,3 @@
-// types/Student.ts (or types.ts)
 export interface Student {
     _id: string;
     name: string;
