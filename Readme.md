@@ -100,6 +100,17 @@ The project structure is organized as follows:
 *   **Theme Context:** The `contexts/ThemeContext.tsx` file provides a React context for managing the application's theme.
 *   **Configuration:** The `cron-config.json` file stores the cron schedule for the data synchronization job.
 
+##  Conclusion
+
+If you have any questions or feedback, feel free to reach out.
+
+### Contact
+
+- **Akshay Esackimuthu**
+- **Email:** akshayesackimuthu@gmail.com
+- **LinkedIn:** [Maanas Sehgal](https://www.linkedin.com/in/akshay-esackimuthu)
+- **GitHub:** [Maanas Sehgal](https://github.com/akshayyy22)
+
 ## Architecture
 
 The application follows a serverless architecture with Next.js API routes handling backend logic and Mongoose interacting with MongoDB for data storage. The cron job is scheduled using `node-cron` and runs on the server to synchronize data and send email reminders.
@@ -136,3 +147,8 @@ sequenceDiagram
     NextJS Backend (API Routes)->MongoDB: Updates Student data (rating, last submission)
     NextJS Backend (API Routes)->NextJS Backend (API Routes): Checks for inactive students & sends reminders (via Nodemailer)
     NextJS Backend (API Routes)-->Cron Job: Acknowledges completion
+
+
+
+
+
