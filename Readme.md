@@ -2,6 +2,14 @@
 
 This project is a Next.js application designed to track and manage the Codeforces activity of students. It allows for easy monitoring of student progress, sending automated email reminders, and configuring synchronization schedules.
 
+## Video
+
+[Project Video Link](https://drive.google.com/file/d/1r-MhTfCTnZgwmOMOVVu5OWcgm1nIOwC7/view?usp=sharing)
+
+## Documentation
+
+[Documentation Link](https://drive.google.com/file/d/10YrabQuhSTEd0OZWRGzsIYS45m9eU8nM/view?usp=sharing)
+
 ## Features
 
 *   **Student Management:** Add, edit, and delete student profiles.
@@ -28,7 +36,7 @@ This project is a Next.js application designed to track and manage the Codeforce
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/akshayyy22/student-progress-system.git
     cd akshayyy22-student-progress-system/my-app
     ```
 2.  **Install dependencies:**
@@ -108,8 +116,8 @@ If you have any questions or feedback, feel free to reach out.
 
 - **Akshay Esackimuthu**
 - **Email:** akshayesackimuthu@gmail.com
-- **LinkedIn:** [Maanas Sehgal](https://www.linkedin.com/in/akshay-esackimuthu)
-- **GitHub:** [Maanas Sehgal](https://github.com/akshayyy22)
+- **LinkedIn:** https://www.linkedin.com/in/akshay-esackimuthu
+- **GitHub:** https://github.com/akshayyy22
 
 ## Architecture
 
